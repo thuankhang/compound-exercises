@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/fragment_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".BarFragment">
+
+        <RelativeLayout
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bar_height"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/arrow_back"
+                android:layout_width="@dimen/icon_edge"
+                android:layout_height="@dimen/icon_edge"
+                android:layout_alignParentStart="true"
+                android:background="@color/white"
+                android:src="@drawable/ic_arrow_back" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/icon_edge"
+                android:layout_toEndOf="@id/arrow_back"
+                android:gravity="center"
+                android:text="@string/bar_compose"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_text_size" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/attach_file"
+                android:layout_width="@dimen/icon_edge"
+                android:layout_height="@dimen/icon_edge"
+                android:layout_toStartOf="@id/send"
+                android:background="@color/white"
+                android:src="@drawable/ic_attach_file_horizontal" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/send"
+                android:layout_width="@dimen/icon_edge"
+                android:layout_height="@dimen/icon_edge"
+                android:layout_toStartOf="@id/more"
+                android:src="@drawable/ic_send"
+                android:background="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/more"
+                android:layout_width="@dimen/icon_edge"
+                android:layout_height="@dimen/icon_edge"
+                android:layout_alignParentEnd="true"
+                android:background="@color/white"
+                android:src="@drawable/ic_more_vert" />
+        </RelativeLayout>
+
+    </FrameLayout>
+</layout>
