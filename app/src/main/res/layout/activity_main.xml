@@ -8,26 +8,18 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragment_bar"
+            android:id="@+id/fragment_send"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:name="com.example.appemail.BarFragment"
+            android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragment_menu"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="@dimen/item_margin_top"
-            android:name="com.example.appemail.MenuFragment"
-            app:layout_constraintTop_toBottomOf="@id/fragment_bar"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/mobile_navigation"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

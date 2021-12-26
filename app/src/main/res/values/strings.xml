@@ -10,4 +10,6 @@
     <string name="item_subject">Subject</string>
     <string name="item_compose_email">Compose Email</string>
     <string name="item_email">study.aibles@gmail.com</string>
+
+    <string name="hey">Hey</string>
 </resources>
