@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/sendFragment">
+
+
+    <fragment
+        android:id="@+id/sendFragment"
+        android:name="com.example.appemail.SendFragment"
+        android:label="SendFragment" >
+        <action
+            android:id="@+id/action_sendFragment_to_receiveFragment"
+            app:destination="@id/receiveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/receiveFragment"
+        android:name="com.example.appemail.ReceiveFragment"
+        android:label="fragment_receive"
+        tools:layout="@layout/fragment_receive" >
+        <argument
+            android:name="from"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="to"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="subject"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="compose"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+
+</navigation>
