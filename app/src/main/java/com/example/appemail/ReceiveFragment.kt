@@ -56,7 +56,7 @@ class ReceiveFragment : Fragment() {
         binding.from.text = from
         binding.to.text = "To $to"
         binding.compose.text = compose
-        binding.avt.text = from.toCharArray()[1].toString()
+        binding.avt.text = from.toCharArray()[0].toString()
         binding.date.text = "$day/$month/$year"
     }
 
